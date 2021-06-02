@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context=".RetagActivity">
+
+    <LinearLayout
+        android:id="@+id/SoundTrackInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ccc"
+        android:backgroundTintMode="multiply"
+        android:background="#414141"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/AlbumArtL"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/noalbumart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Track:"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/SoundTrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Epiphany"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Album:"
+                    android:textColor="#ccc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/AlbumT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Kool 4 Skool"
+
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Artist:"
+                    android:textColor="#ccc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ArtistL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTS"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Duration:"
+                    android:textColor="#ccc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/DurationL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3:42"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_below="@+id/SoundTrackInfo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/albumArt.RT.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Album Cover"
+                android:textColor="#fff" />
+
+            <ImageView
+                android:id="@+id/albumArt.RT"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/albumArt.RT.Head"
+                android:adjustViewBounds="true"/>
+
+            <Button
+                android:id="@+id/selectAA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/albumArt.RT"
+                android:layout_alignParentRight="true"
+                android:onClick="showFileChooser"
+                android:text="Select" />
+
+            <TextView
+                android:id="@+id/File.RA.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectAA"
+                android:text="File Name"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/File.RA.Edit"
+                android:layout_width="match_parent"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/File.RA.Head" />
+
+            <TextView
+                android:id="@+id/Title.RA.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/File.RA.Edit"
+                android:text="Title"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/Title.RA.Edit"
+                android:layout_width="match_parent"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Title.RA.Head" />
+
+            <TextView
+                android:id="@+id/Album.RA.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Title.RA.Edit"
+                android:text="Album"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/Album.RA.Edit"
+                android:layout_width="match_parent"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Album.RA.Head" />
+
+            <TextView
+                android:id="@+id/Artist.RA.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Album.RA.Edit"
+                android:text="Artist"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/Artist.RA.Edit"
+                android:layout_width="match_parent"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Artist.RA.Head" />
+
+            <TextView
+                android:id="@+id/Year.RA.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Artist.RA.Edit"
+                android:text="Year"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/Year.RA.Edit"
+                android:layout_width="match_parent"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Year.RA.Head" />
+
+            <TextView
+                android:id="@+id/Lyrics.RA.Head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Year.RA.Edit"
+                android:text="Lyrics"
+                android:textColor="#fff" />
+
+            <EditText
+                android:id="@+id/Lyrics.RA.Edit"
+                android:layout_width="match_parent"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Lyrics.RA.Head"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/fetchInfo"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Lyrics.RA.Edit"
+                android:layout_alignParentRight="true"
+                android:text="Fetch Info" />
+
+            <Button
+                android:id="@+id/retagbtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fetchInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:background="#000"
+                android:text="Save"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

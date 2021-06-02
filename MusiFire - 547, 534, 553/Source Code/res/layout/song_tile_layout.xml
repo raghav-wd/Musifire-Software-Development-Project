@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/songTile1"
+        android:layout_width="210dp"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/albumArt1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <RelativeLayout
+            android:id="@+id/infoBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:background="#aaaaaa80"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/Title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:text="Title"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Album1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Title1"
+                android:paddingBottom="6dp"
+                android:text="Album1"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/Artist1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Album1"
+                android:paddingBottom="6dp"
+                android:text="Artist1"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/Duration1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Artist1"
+                android:text="Duration1"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

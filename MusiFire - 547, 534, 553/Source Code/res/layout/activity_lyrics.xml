@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/SoundTrackInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ccc"
+        android:backgroundTintMode="multiply"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/AlbumArtL"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/noalbumart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Track:"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/SoundTrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Epiphany"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Album:"
+                    android:textColor="#ccc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/AlbumT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Kool 4 Skool"
+
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Artist:"
+                    android:textColor="#ccc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/ArtistL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTS"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="Duration:"
+                    android:textColor="#ccc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/DurationL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3:42"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/LyricsSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#555"
+        android:backgroundTintMode="multiply">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/SoundTrackInfo"
+            android:backgroundTint="#212121"
+            tools:context=".LyricsActivity">
+
+            <ImageView
+                android:id="@+id/lyricsRefresh"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="refreshLyrics"
+                android:src="@drawable/ic_autorenew_black_24dp" />
+
+            <ImageView
+                android:id="@+id/saveLyrics"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:onClick="saveFetchedLyrics"
+                android:src="@drawable/ic_save_black_24dp" />
+
+            <TextView
+                android:id="@+id/nextline"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_below="@+id/lyricsRefresh" />
+
+            <TextSwitcher
+                android:id="@+id/lyrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nextline"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
